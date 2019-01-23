@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [Parallel test suite]" parallel="tests">
+  <test thread-count="4" name="Regression 1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="testSearchGoogle"/>
+          <include name="postCondition"/>
+          <include name="setUp"/>
+          <include name="testSearchGoogle1"/>
+          <include name="testGooglePageTitleInFirefox2"/>
+          <include name="testGooglePageTitleInFirefox3"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+    </classes>
+  </test> <!-- Regression 1(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->

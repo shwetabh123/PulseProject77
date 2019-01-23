@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [Extent Parallel Test]" parallel="classes">
+  <test name="ExtentWithParallelClasses(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="testSearchGoogle"/>
+          <include name="postCondition"/>
+          <include name="setUp"/>
+          <include name="testSearchGoogle1"/>
+          <include name="testGooglePageTitleInFirefox1"/>
+          <include name="testGooglePageTitleInFirefox2"/>
+          <include name="testGooglePageTitleInFirefox3"/>
+          <include name="testGooglePageTitleInFirefox"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="testSearchGoogle"/>
+          <include name="testGooglePageTitleInFirefox2"/>
+          <include name="postCondition"/>
+          <include name="testSearchGoogle1"/>
+          <include name="setUp"/>
+          <include name="testGooglePageTitleInFirefox1"/>
+          <include name="testGooglePageTitleInFirefox"/>
+          <include name="testGooglePageTitleInFirefox3"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+      <class name="com.pulse.Test.ValidLogin3">
+        <methods>
+          <include name="testGooglePageTitleInFirefox1"/>
+          <include name="testSearchGoogle1"/>
+          <include name="postCondition"/>
+          <include name="setUp"/>
+          <include name="testGooglePageTitleInFirefox"/>
+          <include name="testGooglePageTitleInFirefox2"/>
+          <include name="testSearchGoogle"/>
+          <include name="testGooglePageTitleInFirefox3"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin3 -->
+    </classes>
+  </test> <!-- ExtentWithParallelClasses(failed) -->
+</suite> <!-- Failed suite [Extent Parallel Test] -->
